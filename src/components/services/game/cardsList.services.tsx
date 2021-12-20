@@ -20,7 +20,7 @@ const useCardsSListServices = () => {
 		return cards;
 	};
 
-	const flippingCard = (index: number, increaseWorngGuesses: any): void => {
+	const flippingCard = (index: number, increaseWorngGuesses: () => void): void => {
 		let newCardList: ICardItem[] = [...cardsList];
 		let newFlippedCards: ICardItem[] = [...flippedCards];
 
