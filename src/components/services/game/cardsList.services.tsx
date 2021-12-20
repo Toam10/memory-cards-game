@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ICardItem } from "../../../types/game/cards.types";
 import CardItem from "../../game/cardItem";
 
 const useCardsSListServices = () => {
 	const [cardsList, setCardsList] = useState<ICardItem[]>([]);
 	const [flippedCards, setFlippedCards] = useState<ICardItem[]>([]);
-
+	const navigate = useNavigate();
 	const shuffle = (cards: ICardItem[]) => {
 		let currentIndex: number = cards.length;
 		let randomIndex: number;
@@ -47,10 +48,13 @@ const useCardsSListServices = () => {
 			}
 		}
 		setFlippedCards(newFlippedCards);
-		if (newCardList.every((card) => card.isHidden === false)) alert("you are the winnner");
+		if (newCardList.every((card) => card.isHidden === false)) {
+			alert("you are the winnner");
+			navigate("/", { replace: true });
+		}
 	};
 
-	return { shuffle, flippingCard, setCardsList, cardsList };
+	return { shuffle, flippingCard, setCardsList, setFlippedCards, cardsList };
 };
 
 export default useCardsSListServices;

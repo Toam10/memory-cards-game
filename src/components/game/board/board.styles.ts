@@ -17,3 +17,19 @@ export const CardsListContainer = styled.div`
 	grid-template-rows: repeat(3, 1fr);
 	margin-top: 100px;
 `;
+
+export const GoHomeButton = styled.button`
+	width: 150px;
+	height: 50px;
+	border: 1px solid gray;
+	font-size: large;
+	background-color: indianred;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: wheat;
+	cursor: pointer;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	border-radius: 10px;
+`;
