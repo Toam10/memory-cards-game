@@ -1,7 +1,8 @@
 import React from "react";
-
-const Card = () => {
-	return null;
+import { ICardProps } from "../../../types/game/card.types";
+import * as Style from "./card.styles";
+const Card = ({ card }: ICardProps) => {
+	return <Style.Container>{card}</Style.Container>;
 };
 
 export default Card;

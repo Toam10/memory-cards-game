@@ -1,7 +1,12 @@
 import React from "react";
-
+import CardsList from "../cardsList";
+import * as Style from "./board.styles";
 const Board = () => {
-	return null;
+	return (
+		<Style.Container>
+			<CardsList />
+		</Style.Container>
+	);
 };
 
 export default Board;

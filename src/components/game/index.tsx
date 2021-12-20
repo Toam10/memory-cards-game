@@ -1,7 +1,8 @@
 import React from "react";
+import Board from "./board";
 
 const Game = () => {
-	return null;
+	return <Board />;
 };
 
 export default Game;
