@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
 	return (
 		<>
-			<Link to="/Game">
+			<Link to="/GameDifficulty">
 				<Style.StartButton>Start Game</Style.StartButton>
 			</Link>
 		</>
