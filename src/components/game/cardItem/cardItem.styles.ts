@@ -8,4 +8,5 @@ export const Container = styled.div`
 	text-align: center;
 	line-height: 300px;
 	font-size: 100px;
+	cursor: pointer;
 `;

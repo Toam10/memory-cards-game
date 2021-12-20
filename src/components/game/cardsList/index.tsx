@@ -5,6 +5,7 @@ import CardItem from "../cardItem";
 
 const CardsList = () => {
 	const [cardsList, setCardsList] = useState<ICardItem[]>([]);
+	const [flippedCards, setFlippedCards] = useState<ICardItem[]>([]);
 
 	useEffect(() => {
 		const newCardsList = shuffle([...CARDS_12]);
@@ -27,8 +28,33 @@ const CardsList = () => {
 		return cards;
 	};
 
+	const flippingCard = (index: number): void => {
+		let newCardList: ICardItem[] = [...cardsList];
+		let newFlippedCards: ICardItem[] = [...flippedCards];
+
+		newCardList[index].isHidden = newCardList[index].isHidden = false;
+		newFlippedCards.push(newCardList[index]);
+
+		if (newFlippedCards.length >= 2) {
+			const [card1, card2] = newFlippedCards;
+			if (card1.value === card2.value) newFlippedCards = [];
+			if (card1.value !== card2.value) {
+				newFlippedCards = [];
+				setTimeout(() => {
+					console.log(newFlippedCards);
+					newCardList = newCardList.map((card) => {
+						card.isHidden = true;
+						return card;
+					});
+					setCardsList(newCardList);
+				}, 500);
+			}
+		}
+		setFlippedCards(newFlippedCards);
+	};
+
 	const arrangingCards = (card: ICardItem, index: number) => {
-		return <CardItem key={index} card={card} />;
+		return <CardItem key={index} card={card} flippingCard={() => flippingCard(index)} />;
 	};
 
 	return <>{cardsList.map(arrangingCards)}</>;

@@ -3,4 +3,5 @@ export interface ICardItemProps {
 		value: string | number;
 		isHidden: boolean;
 	};
+	flippingCard(): void;
 }
