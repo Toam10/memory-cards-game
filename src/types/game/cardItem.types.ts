@@ -5,3 +5,7 @@ export interface ICardItemProps {
 	};
 	flippingCard(): void;
 }
+
+export interface ICardContainer {
+	isHidden: boolean;
+}

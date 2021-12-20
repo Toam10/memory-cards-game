@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ICardItem } from "../../../types/game/cards.types";
-import CardItem from "../../game/cardItem";
+import { ICardItem } from "../../../types/game/cardsList.types";
 
 const useCardsSListServices = () => {
 	const [cardsList, setCardsList] = useState<ICardItem[]>([]);

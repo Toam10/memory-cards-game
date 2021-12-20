@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CARDS_12 } from "../../../constants/cards.constants";
-import { ICardItem, ICardsListProps } from "../../../types/game/cards.types";
+import { ICardItem, ICardsListProps } from "../../../types/game/cardsList.types";
 import useCardsSListServices from "../../services/game/cardsList.services";
 import CardItem from "../cardItem";
 

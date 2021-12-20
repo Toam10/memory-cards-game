@@ -5,7 +5,7 @@ const Home = () => {
 	return (
 		<>
 			<Link to="/Game">
-				<Style.StartButton>Start Game</Style.StartButton>;
+				<Style.StartButton>Start Game</Style.StartButton>
 			</Link>
 		</>
 	);

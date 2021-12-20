@@ -32,4 +32,17 @@ export const GoHomeButton = styled.button`
 	left: 20px;
 	top: 20px;
 	border-radius: 10px;
+
+	@media (max-width: 450px) {
+		width: 20vw;
+		height: auto;
+		border: 1px solid gray;
+		margin: 3px;
+		text-align: center;
+		font-size: small;
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 `;
