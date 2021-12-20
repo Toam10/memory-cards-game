@@ -1,3 +1,6 @@
-export interface ICardProps {
-	card: string | number;
+export interface ICardItemProps {
+	card: {
+		value: string | number;
+		isHidden: boolean;
+	};
 }
